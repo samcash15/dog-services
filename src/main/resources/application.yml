@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: 'none'
+      naming:
+        physical-strategy: 'org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl'
+  datasource:
+    jdbc:
+      username: 'cashionsam'
+      password: '8d4lC6wIwPSiERxuWi3Z'
+      url: 'jdbc:mysql://dog-services-mysql-db.cll5o4uf3tvt.us-east-2.rds.amazonaws.com:3306/DogServicesMySQLDB'
