@@ -13,10 +13,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 public class DogBreedController {
     public static final Log LOG = LogFactory.getLog(DogBreedController.class);
 
@@ -41,11 +39,6 @@ public class DogBreedController {
         }
 
         return ResponseEntity.ok("");
-    }
-
-    @GetMapping(path = "/getAllBreeds", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<DogBreed> getAllBreeds() {
-        return dogBreedRepository.findAll();
     }
 
     @GetMapping(path = "/getBreed/{breed}", produces = {MediaType.APPLICATION_JSON_VALUE})

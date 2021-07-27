@@ -89,6 +89,7 @@ public class DogBreedServiceImpl implements DogBreedService {
                     trainability.setDogId(dogBreed);
                     trainRepo.save(trainability);
                 }
+                LOG.info("Successfully saved to all the corresponding tables.");
 
             }
         } catch(Exception e) {

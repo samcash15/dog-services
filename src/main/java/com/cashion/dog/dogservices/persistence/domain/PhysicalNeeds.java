@@ -1,7 +1,9 @@
 package com.cashion.dog.dogservices.persistence.domain;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -21,6 +23,8 @@ public class PhysicalNeeds {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOG_ID")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     private DogBreed dogId;
 
     @Max(value = 5)
