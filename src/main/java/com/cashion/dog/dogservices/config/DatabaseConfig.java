@@ -10,20 +10,23 @@ import javax.sql.DataSource;
 @Configuration
 public class DatabaseConfig {
 
-    @Value("${spring.datasource.jdbc.username}")
+    @Value("${spring.datasource.username}")
     private String username;
 
-    @Value("${spring.datasource.jdbc.password}")
+    @Value("${spring.datasource.password}")
     private String password;
 
-    @Value("${spring.datasource.jdbc.url}")
+    @Value("${spring.datasource.url}")
     private String url;
+
+    @Value("${spring.datasource.driverClassName}")
+    private String driverClassName;
 
     @Bean
     public DataSource buildDataSource() {
         return DataSourceBuilder.create()
                 .url(url)
-                .driverClassName("com.mysql.cj.jdbc.Driver")
+                .driverClassName(driverClassName)
                 .username(username)
                 .password(password)
                 .build();

@@ -1,13 +1,12 @@
 package com.cashion.dog.dogservices.restservice.breed.resource;
 
-import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
-
+import java.io.Serializable;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Data
 public class DogBreedResource implements Serializable {
@@ -62,4 +61,7 @@ public class DogBreedResource implements Serializable {
 
     }
 
+    public DogBreedResource() {
+
+    }
 }

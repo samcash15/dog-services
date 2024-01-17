@@ -1,13 +1,20 @@
 package com.cashion.dog.dogservices.persistence.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
-import javax.persistence.*;
-import javax.validation.constraints.Max;
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -23,8 +30,6 @@ public class Adaptability {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOG_ID")
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
     private DogBreed dogId;
 
     @Max(value = 5)
