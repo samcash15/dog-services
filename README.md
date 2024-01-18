@@ -6,6 +6,7 @@ This Java Spring application was part of my IDEXX interview project. It's design
 
 - `/addBreed`: Allows users to add a new dog breed to the database.
 - `/getBreed/{breed}`: Enables users to retrieve information about a specific dog breed.
+- `/getAllBreeds`: Returns a List of Breeds to the user to know which breeds are already in the database.
 
 ## Motivation
 
