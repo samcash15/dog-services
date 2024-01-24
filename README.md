@@ -47,4 +47,5 @@ To get this application running on your local machine, follow these steps:
    1. Navigate to the Swagger Documentation listed above.
    2. To get started with the `/addBreed`, check out the Swagger Documentation, for example, request and response JSONs.
    3. This is the same for the `/getBreed{breed}`. This endpoint will only return breeds that are stored in the database. The Swagger Documentation has example request and response JSON.
+   4. This is the same for the `/getAllBreeds`.
 
