@@ -22,7 +22,7 @@ The goal of this project is to highlight my ability to:
 - Spring Framework
 - Database Management
 - Swagger Integration for API documentation
-- RESTful API Development
+- RESTful API Design & Development
 
 ## Getting Started
 
