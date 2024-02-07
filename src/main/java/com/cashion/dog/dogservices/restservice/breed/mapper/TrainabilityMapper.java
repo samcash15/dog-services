@@ -1,7 +1,7 @@
 package com.cashion.dog.dogservices.restservice.breed.mapper;
 
 import com.cashion.dog.dogservices.persistence.domain.Trainability;
-import com.cashion.dog.dogservices.restservice.breed.resource.TrainabilityResource;
+import com.cashion.dog.dogservices.restservice.breed.request.TrainabilityRequest;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -9,18 +9,18 @@ import java.util.Date;
 @Component
 public class TrainabilityMapper {
 
-    public Trainability mapResourceToDomain(TrainabilityResource resource) {
-        if (resource == null) {
+    public Trainability mapResourceToDomain(TrainabilityRequest request) {
+        if (request == null) {
             return null;
         }
 
         Trainability domain = new Trainability();
-        domain.setEasyToTrain(resource.getEasyToTrain());
-        domain.setIntelligence(resource.getIntelligence());
-        domain.setPotentialForMouthiness(resource.getPotentialForMouthiness());
-        domain.setPreyDrive(resource.getPreyDrive());
-        domain.setTendencyToBarkOrHowl(resource.getTendencyToBarkOrHowl());
-        domain.setWanderlustPotential(resource.getWanderlustPotential());
+        domain.setEasyToTrain(request.getEasyToTrain());
+        domain.setIntelligence(request.getIntelligence());
+        domain.setPotentialForMouthiness(request.getPotentialForMouthiness());
+        domain.setPreyDrive(request.getPreyDrive());
+        domain.setTendencyToBarkOrHowl(request.getTendencyToBarkOrHowl());
+        domain.setWanderlustPotential(request.getWanderlustPotential());
         domain.setCreateDate(new Date());
 
         return domain;

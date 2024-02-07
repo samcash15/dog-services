@@ -1,7 +1,7 @@
 package com.cashion.dog.dogservices.restservice.breed.mapper;
 
 import com.cashion.dog.dogservices.persistence.domain.HealthAndGroomingNeeds;
-import com.cashion.dog.dogservices.restservice.breed.resource.HealthAndGroomingNeedsResource;
+import com.cashion.dog.dogservices.restservice.breed.request.HealthAndGroomingNeedsRequest;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -9,18 +9,18 @@ import java.util.Date;
 @Component
 public class HealthAndGroomingNeedsMapper {
 
-    public HealthAndGroomingNeeds mapResourceToDomain(HealthAndGroomingNeedsResource resource) {
-        if (resource == null) {
+    public HealthAndGroomingNeeds mapResourceToDomain(HealthAndGroomingNeedsRequest request) {
+        if (request == null) {
             return null;
         }
 
         HealthAndGroomingNeeds domain = new HealthAndGroomingNeeds();
-        domain.setAmountOfShedding(resource.getAmountOfShedding());
-        domain.setDroolingPotential(resource.getDroolingPotential());
-        domain.setEasyToGroom(resource.getEasyToGroom());
-        domain.setGeneralHealth(resource.getGeneralHealth());
-        domain.setPotentialForWeightGain(resource.getPotentialForWeightGain());
-        domain.setSize(resource.getSize());
+        domain.setAmountOfShedding(request.getAmountOfShedding());
+        domain.setDroolingPotential(request.getDroolingPotential());
+        domain.setEasyToGroom(request.getEasyToGroom());
+        domain.setGeneralHealth(request.getGeneralHealth());
+        domain.setPotentialForWeightGain(request.getPotentialForWeightGain());
+        domain.setSize(request.getSize());
         domain.setCreateDate(new Date());
 
         return domain;

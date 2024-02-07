@@ -1,7 +1,7 @@
 package com.cashion.dog.dogservices.restservice.breed.mapper;
 
 import com.cashion.dog.dogservices.persistence.domain.Friendliness;
-import com.cashion.dog.dogservices.restservice.breed.resource.FriendlinessResource;
+import com.cashion.dog.dogservices.restservice.breed.request.FriendlinessRequest;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -9,16 +9,16 @@ import java.util.Date;
 @Component
 public class FriendlinessMapper {
 
-    public Friendliness mapResourceToDomain(FriendlinessResource resource) {
-        if (resource == null) {
+    public Friendliness mapResourceToDomain(FriendlinessRequest request) {
+        if (request == null) {
             return null;
         }
 
         Friendliness domain = new Friendliness();
-        domain.setAffectionateWithFamily(resource.getAffectionateWithFamily());
-        domain.setKidFriendly(resource.getKidFriendly());
-        domain.setDogFriendly(resource.getDogFriendly());
-        domain.setFriendlyTowardStrangers(resource.getFriendlyTowardStrangers());
+        domain.setAffectionateWithFamily(request.getAffectionateWithFamily());
+        domain.setKidFriendly(request.getKidFriendly());
+        domain.setDogFriendly(request.getDogFriendly());
+        domain.setFriendlyTowardStrangers(request.getFriendlyTowardStrangers());
         domain.setCreateDate(new Date());
 
         return domain;
