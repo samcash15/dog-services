@@ -4,11 +4,11 @@ This Java Spring application was part of my IDEXX interview project. It's design
 
 ## Features
 
-- `/addBreed`: Allows users to add a new dog breed to the database.
-- `/getBreed/{breed}`: Enables users to retrieve information about a specific dog breed.
-- `/getAllBreeds`: Returns a List of Breeds to the user to know which breeds are already in the database.
-- `/updateBreed/{breed}`: The user can update breed information in the database.
-- `/deleteBreed/{breed}`: The user can delete a breed from the database. 
+- POST `/addBreed`: Allows users to add a new dog breed to the database.
+- GET `/getBreed/{breed}`: Enables users to retrieve information about a specific dog breed.
+- GET `/getAllBreeds`: Returns a List of Breeds to the user to know which breeds are already in the database.
+- PUT `/updateBreed/{breed}`: The user can update breed information in the database.
+- DELETE `/deleteBreed/{breed}`: The user can delete a breed from the database. 
 
 ## Motivation
 
