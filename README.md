@@ -7,6 +7,8 @@ This Java Spring application was part of my IDEXX interview project. It's design
 - `/addBreed`: Allows users to add a new dog breed to the database.
 - `/getBreed/{breed}`: Enables users to retrieve information about a specific dog breed.
 - `/getAllBreeds`: Returns a List of Breeds to the user to know which breeds are already in the database.
+- `/updateBreed/{breed}`: The user can update breed information in the database.
+- `/deleteBreed/{breed}`: The user can delete a breed from the database. 
 
 ## Motivation
 
@@ -29,7 +31,7 @@ The goal of this project is to highlight my ability to:
 To get this application running on your local machine, follow these steps:
 
 1. **Prerequisites**
-   - Ensure you have Java 11 installed on your machine.
+   - Please make sure you have Java 17 installed on your machine.
    - Any IDE that supports Java (like IntelliJ IDEA, Eclipse, etc.)
 
 2. **Setting Up**
@@ -45,7 +47,4 @@ To get this application running on your local machine, follow these steps:
   
 ## Usage
    1. Navigate to the Swagger Documentation listed above.
-   2. To get started with the `/addBreed`, check out the Swagger Documentation, for example, request and response JSONs.
-   3. This is the same for the `/getBreed{breed}`. This endpoint will only return breeds that are stored in the database. The Swagger Documentation has example request and response JSON.
-   4. This is the same for the `/getAllBreeds`.
-
+   2. To get started with any of the endpoints, check out the swagger documentation
