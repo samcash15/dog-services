@@ -1,12 +1,11 @@
-package com.cashion.dog.dogservices.restservice.breed.resource;
+package com.cashion.dog.dogservices.restservice.breed.request;
 
+import jakarta.validation.constraints.Max;
+import java.io.Serializable;
 import lombok.Data;
 
-import javax.validation.constraints.Max;
-import java.io.Serializable;
-
 @Data
-public class FriendlinessResource implements Serializable {
+public class FriendlinessRequest implements Serializable {
     @Max(value = 5)
     private Long affectionateWithFamily;
 

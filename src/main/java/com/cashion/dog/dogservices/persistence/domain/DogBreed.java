@@ -1,18 +1,30 @@
 package com.cashion.dog.dogservices.persistence.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Size;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Size;
 import java.util.Date;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "DOG_BREED")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class DogBreed {
 
     @Id
@@ -58,19 +70,19 @@ public class DogBreed {
     @Column(name = "UPDATE_DATE")
     private Date updateDate;
 
-    @OneToOne(mappedBy = "dogId", cascade = CascadeType.ALL)
-    private Adaptability adaptability;
-
-    @OneToOne(mappedBy = "dogId", cascade = CascadeType.ALL)
-    private Friendliness friendliness;
-
-    @OneToOne(mappedBy = "dogId", cascade = CascadeType.ALL)
-    private HealthAndGroomingNeeds healthAndGroomingNeeds;
-
-    @OneToOne(mappedBy = "dogId", cascade = CascadeType.ALL)
-    private PhysicalNeeds physicalNeeds;
-
-    @OneToOne(mappedBy = "dogId", cascade = CascadeType.ALL)
-    private Trainability trainability;
+//    @OneToOne(mappedBy = "dogBreed", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private Adaptability adaptability;
+//
+//    @OneToOne(mappedBy = "dogBreed", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private Friendliness friendliness;
+//
+//    @OneToOne(mappedBy = "dogBreed", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private HealthAndGroomingNeeds healthAndGroomingNeeds;
+//
+//    @OneToOne(mappedBy = "dogBreed", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private PhysicalNeeds physicalNeeds;
+//
+//    @OneToOne(mappedBy = "dogBreed", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private Trainability trainability;
 
 }
