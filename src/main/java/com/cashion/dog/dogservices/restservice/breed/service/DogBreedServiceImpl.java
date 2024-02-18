@@ -2,7 +2,12 @@ package com.cashion.dog.dogservices.restservice.breed.service;
 
 import com.cashion.dog.dogservices.common.exception.DogBreedAlreadyExistsException;
 import com.cashion.dog.dogservices.common.exception.DogBreedException;
+import com.cashion.dog.dogservices.persistence.domain.Adaptability;
 import com.cashion.dog.dogservices.persistence.domain.DogBreed;
+import com.cashion.dog.dogservices.persistence.domain.Friendliness;
+import com.cashion.dog.dogservices.persistence.domain.HealthAndGroomingNeeds;
+import com.cashion.dog.dogservices.persistence.domain.PhysicalNeeds;
+import com.cashion.dog.dogservices.persistence.domain.Trainability;
 import com.cashion.dog.dogservices.persistence.repository.AdaptabilityRepository;
 import com.cashion.dog.dogservices.persistence.repository.DogBreedRepository;
 import com.cashion.dog.dogservices.persistence.repository.FriendlinessRepository;
@@ -77,38 +82,38 @@ public class DogBreedServiceImpl implements DogBreedService {
 
         try {
                 DogBreed dogBreed = dogBreedMapper.mapRequestToDomain(request);
-//                Adaptability adaptability = adaptabilityMapper.mapResourceToDomain(request.getAdaptabilityRequest());
-//                Friendliness friendliness = friendlinessMapper.mapResourceToDomain(request.getFriendlinessRequest());
-//                HealthAndGroomingNeeds healthAndGroomingNeeds = healthAndGroomingNeedsMapper.mapResourceToDomain(request.getHealthAndGroomingNeedsRequest());
-//                PhysicalNeeds physicalNeeds = physicalNeedsMapper.mapResourceToDomain(request.getPhysicalNeedsRequest());
-//                Trainability trainability = trainabilityMapper.mapResourceToDomain(request.getTrainabilityRequest());
+                Adaptability adaptability = adaptabilityMapper.mapResourceToDomain(request.getAdaptabilityRequest());
+                Friendliness friendliness = friendlinessMapper.mapResourceToDomain(request.getFriendlinessRequest());
+                HealthAndGroomingNeeds healthAndGroomingNeeds = healthAndGroomingNeedsMapper.mapResourceToDomain(request.getHealthAndGroomingNeedsRequest());
+                PhysicalNeeds physicalNeeds = physicalNeedsMapper.mapResourceToDomain(request.getPhysicalNeedsRequest());
+                Trainability trainability = trainabilityMapper.mapResourceToDomain(request.getTrainabilityRequest());
 
                 repository.save(dogBreed);
 
-//                if (adaptability != null) {
-//                    adaptability.setDogBreed(dogBreed);
-//                    adaptRepo.save(adaptability);
-//                }
-//
-//                if (friendliness != null) {
-//                    friendliness.setDogBreed(dogBreed);
-//                    friendlinessRepo.save(friendliness);
-//                }
-//
-//                if (healthAndGroomingNeeds != null) {
-//                    healthAndGroomingNeeds.setDogBreed(dogBreed);
-//                    healthRepo.save(healthAndGroomingNeeds);
-//                }
-//
-//                if (physicalNeeds != null) {
-//                    physicalNeeds.setDogBreed(dogBreed);
-//                    physicalNeedsRepo.save(physicalNeeds);
-//                }
-//
-//                if (trainability != null) {
-//                    trainability.setDogBreed(dogBreed);
-//                    trainRepo.save(trainability);
-//                }
+                if (adaptability != null) {
+                    adaptability.setDogBreed(dogBreed);
+                    adaptRepo.save(adaptability);
+                }
+
+                if (friendliness != null) {
+                    friendliness.setDogBreed(dogBreed);
+                    friendlinessRepo.save(friendliness);
+                }
+
+                if (healthAndGroomingNeeds != null) {
+                    healthAndGroomingNeeds.setDogBreed(dogBreed);
+                    healthRepo.save(healthAndGroomingNeeds);
+                }
+
+                if (physicalNeeds != null) {
+                    physicalNeeds.setDogBreed(dogBreed);
+                    physicalNeedsRepo.save(physicalNeeds);
+                }
+
+                if (trainability != null) {
+                    trainability.setDogBreed(dogBreed);
+                    trainRepo.save(trainability);
+                }
                 LOG.info("Successfully saved to all the corresponding tables.");
                 return dogBreed;
         } catch(Exception e) {
