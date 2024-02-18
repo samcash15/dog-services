@@ -40,10 +40,10 @@ public class DogBreedRequest implements Serializable {
     @Max(value = 5)
     private Long physicalNeedsRating;
 
-//    private AdaptabilityRequest adaptabilityRequest;
-//    private FriendlinessRequest friendlinessRequest;
-//    private HealthAndGroomingNeedsRequest healthAndGroomingNeedsRequest;
-//    private TrainabilityRequest trainabilityRequest;
-//    private PhysicalNeedsRequest physicalNeedsRequest;
+    private AdaptabilityRequest adaptabilityRequest;
+    private FriendlinessRequest friendlinessRequest;
+    private HealthAndGroomingNeedsRequest healthAndGroomingNeedsRequest;
+    private TrainabilityRequest trainabilityRequest;
+    private PhysicalNeedsRequest physicalNeedsRequest;
 
 }
