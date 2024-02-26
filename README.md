@@ -1,6 +1,6 @@
 # Dog-Services | Dog Breed API
 
-This Java Spring application was part of my IDEXX interview project. It's designed to manage dog breed information via RESTful endpoints, showcasing my skills in creating a Java Spring application, implementing REST endpoints, and using the Java Persistence API.
+This Java Spring application is designed to manage dog breed information via RESTful endpoints.
 
 ## Features
 
