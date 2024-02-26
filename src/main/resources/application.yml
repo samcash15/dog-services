@@ -24,9 +24,10 @@ springdoc:
       path: /api-docs
     swagger-ui:
       path: /swagger-ui.html
-server:
-  servlet:
-    context-path: /dog
 logging:
   level:
     org.hibernate.SQL: DEBUG
+security:
+  api-key-header-name: X-API-KEY
+  api:
+    key: DogBreedAPIKey
